@@ -1,0 +1,18 @@
+hmily:
+  server:
+    configMode: local
+    appName: dt-demo-tcc-inventory
+  config:
+    appName: dt-demo-tcc-inventory
+    scheduledRecoveryDelay: 5
+    scheduledInitDelay: 5
+    recoverDelayTime: 5
+    retryMax: 3
+    repository: mysql
+
+repository:
+  database:
+    driverClassName: com.mysql.jdbc.Driver
+    url : jdbc:mysql://127.0.0.1:3306/hmily?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root

@@ -1,0 +1,30 @@
+server:
+  port: 28083
+  address: 0.0.0.0
+  servlet:
+    context-path: /
+
+spring:
+    datasource:
+        driver-class-name:  com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/dt_demo_inventory?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+
+grpc:
+  port: 28073
+
+mybatis:
+  type-aliases-package: com.example.dt.demo.core.inventory.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+
+logging:
+    level:
+        root: error
+        org.springframework.web: info
+        org.apache.ibatis: debug
+        com.example.dt.demo.bonuspoint: debug
+        com.example.dt.demo.lottery: debug
+        com.example.dt.demo: debug
+    path: "./logs"
+
